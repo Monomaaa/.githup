@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-padding-top: 0;
+}
+
+/* index */
+
+/* navbar */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: end;
+}
+
+nav{
+    display: flex;
+    width: 84%;
+    height: 10%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    transition: .5s ease-in-out;
+    transition-delay: .2s;
+    color: blue;
+}
+/* hamburgen menu */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    opacity: 0;
+    left: -6px;
+    top: -5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    transition: all 0.5s;
+}
+
+/* menu animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+  
+    }
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+      
+    }
+    
+.menu-toggle input:checked ~ span:nth-child(2) {
+transform: rotate(45deg) translate(-1px,-1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px,0);
+    }
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    scale: 0;
+    
+}
+
+/* responsif */
+@media screen and (max-width: 768px){
+    .menu-toggle {
+        display: flex;
+    }
+
+  
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly ;
+        background-color: #b6b6b6;
+        transform: translateX(100%);
+        transition: all 0.9s;
+        }
+
+    nav ul.slide{
+        transform: translateX(0);
+    }
+
+    .images {
+        scale: 80%;
+        bottom: -5px;
+    }
+
+    .detel {
+        z-index: 2;
+    }
+
+    .social {
+       
+
+    }
+    .footer {
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        
+}
+
+
+@media screen and (max-width: 576px){
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+
+    }
+    
+
+    .images {
+        scale: 100%;
+        opacity: 0.7;
+        z-index: -2;
+    }
+  
+    }
+
+
+    .social {
+        z-index: 3;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        bottom: 60px;
+        opacity: 100%;
+        z-index: 2;
+
+    }
+
+   
+
+
+/* konten */
+
+.detel{
+    margin-left: 8%;
+    margin-top: 15%;
+    z-index: 2;
+}
+
+.detel h1{
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.span-nama {
+    color: #000000;
+}
+
+span{
+    color: blue;
+    
+}
+
+.detel p{
+    color: #000000;
+    line-height: 22px;
+}
+
+.detel a{
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+.images{
+    width: 45%;
+    height: 80vh;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape{
+    bottom: 40px;
+}
+
+.images:hover .aku{
+    left: 45%;
+}
+
+.social{
+    background-color: #000;
+    display: flex;
+    position: absolute;
+    left: 149px;
+    margin-top: 0;
+    height: 0;
+}
+
+.social a{
+    font-size: 30px;
+    color: #212121;
+    margin-right: 20px;
+}
+
+.social a:hover{
+    color: blue;
+    bottom: 10%;
+
+}
+
+.footer {
+width: 100%;
+position: absolute;
+bottom: 5px;
+z-index: -2;
+}
+
+.h1-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+/* index done */
+
+/* saya */
+
+.mid-conten{
+   
+}
+
+.mid-conten img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    z-index: -2;
+    scale: 80%;
+}
+
+
+/* saya done */
